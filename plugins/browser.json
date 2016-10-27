@@ -1,0 +1,19 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.reece.hackathon.carpark"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "451225327502",
+            "PACKAGE_NAME": "com.reece.hackathon.carpark"
+        }
+    },
+    "dependent_plugins": {}
+}

@@ -1,0 +1,71 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"EmailComposer\"><param name=\"browser-package\" value=\"de.appplant.cordova.emailcomposer.EmailComposer\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.reece.hackathon.carpark"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "451225327502",
+            "PACKAGE_NAME": "com.reece.hackathon.carpark"
+        },
+        "cordova-plugin-email-composer": {
+            "PACKAGE_NAME": "com.reece.hackathon.carpark"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/phonegap-plugin-push/www/push.js",
+            "id": "phonegap-plugin-push.PushNotification",
+            "pluginId": "phonegap-plugin-push",
+            "clobbers": [
+                "PushNotification"
+            ]
+        },
+        {
+            "file": "plugins/phonegap-plugin-push/www/browser/push.js",
+            "id": "phonegap-plugin-push.BrowserPush",
+            "pluginId": "phonegap-plugin-push",
+            "clobbers": [
+                "PushNotification"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-email-composer/www/email_composer.js",
+            "id": "cordova-plugin-email-composer.EmailComposer",
+            "pluginId": "cordova-plugin-email-composer",
+            "clobbers": [
+                "cordova.plugins.email",
+                "plugin.email"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-email-composer/src/browser/EmailComposerProxy.js",
+            "id": "cordova-plugin-email-composer.EmailComposerProxy",
+            "pluginId": "cordova-plugin-email-composer",
+            "runs": true
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.3.0",
+        "phonegap-plugin-push": "1.8.3",
+        "cordova-plugin-email-composer": "0.8.3"
+    }
+}
